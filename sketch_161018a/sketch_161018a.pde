@@ -8,17 +8,14 @@ void setup () {
 }
 void draw () {
   text("ZOMBIE", mouseX, mouseY);
-   if(mouseX %2==0) {
-  fill (0, 255, 0);
-   }
-   
-   else {
-  fill (255, 0, 0);
-   }
-   ellipse (650, 500, 200, 200);
- ellipse (975, 500, 200, 200);
+  if (mouseX %2==0) {
+    fill (0, 255, 0);
+  } else {
+    fill (255, 0, 0);
+  }
+  ellipse (650, 500, 200, 200);
+  ellipse (975, 500, 200, 200);
 } 
-
 
 
 
