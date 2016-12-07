@@ -6,6 +6,7 @@ PImage donkey;
   PImage blackscreen;
   int x;
   int y;
+  long timer;
 void setup() {
   Minim minim = new Minim (this);
   soundl = minim.loadSample("yay.wav");
@@ -43,13 +44,17 @@ else {
   
  println(x, y);
 if (x > 188 && x < 202 && y > 30 && y < 48 ) {
+  sound2.stop();
   soundl.trigger();
   println("Complete");
   
 }
-else {
+ 
+
   sound2.trigger();
-}
+  
+  
+
   }  
 }
 //180 197 44 26
