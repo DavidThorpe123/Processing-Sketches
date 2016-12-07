@@ -1,10 +1,16 @@
+import ddf.minim.*;
+AudioSample soundl;
+AudioSample sound2;
 PImage donkey;
   PImage tail;
   PImage blackscreen;
   int x;
   int y;
 void setup() {
- 
+  Minim minim = new Minim (this);
+  soundl = minim.loadSample("yay.wav");
+  sound2 = minim.loadSample("boo2.mp3");
+ frameRate(10);
   size(220, 157);
  
   tail = loadImage ("tail.png");
@@ -34,11 +40,16 @@ else {
   if (mousePressed) {
  x = mouseX;
  y = mouseY;
-  }
-if (x == 188 && y == 42) {
-  println("Comeplete");
+  
+ println(x, y);
+if (x > 188 && x < 202 && y > 30 && y < 48 ) {
+  soundl.trigger();
+  println("Complete");
   
 }
-  
+else {
+  sound2.trigger();
 }
-//188 41
+  }  
+}
+//180 197 44 26
